@@ -4,17 +4,17 @@ import (
 	"github.com/solsw/generichelper"
 )
 
-// Nullable represents a type that may have no value.
+// Nullable represents any type that may have no value.
 type Nullable[T any] struct {
 	val *T
 }
 
-// NewNull creates a new Nullable without value.
+// NewNull creates a new [Nullable] without value.
 func NewNull[T any]() *Nullable[T] {
 	return &Nullable[T]{val: nil}
 }
 
-// New creates a new Nullable with value 'v'.
+// New creates a new [Nullable] with value 'v'.
 func New[T any](v T) *Nullable[T] {
 	return &Nullable[T]{val: &v}
 }
@@ -35,15 +35,17 @@ func (n *Nullable[T]) Null() {
 }
 
 // nullable_Get is used for testing
-func nullable_Get[T any](n *Nullable[T]) (v T, ok bool) {
+func nullable_Get[T any](n *Nullable[T]) (T, bool) {
 	if !n.Has() {
 		return generichelper.ZeroValue[T](), false
 	}
 	return *n.val, true
 }
 
-// Get returns (n's value and true) if n has a value and (T's zero value and false) if n has no value.
-func (n *Nullable[T]) Get() (v T, ok bool) {
+// Get returns (n's value, true) if n has a value and (T's [zero value], false) if n has no value.
+//
+// [zero value]: https://go.dev/ref/spec#The_zero_value
+func (n *Nullable[T]) Get() (T, bool) {
 	return nullable_Get(n)
 }
 
