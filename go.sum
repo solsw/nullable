@@ -1,3 +1,2 @@
-github.com/solsw/builtinhelper v0.2.1 h1:qlRairaa6gVLuM2l6ty/2TAqMHjfuGx9EZSj5ZtRVL8=
-github.com/solsw/generichelper v0.1.1 h1:sCvYsm7rO4oDmZorVph3L1WLheeV3Fdc+J7l1OA06Wg=
-github.com/solsw/generichelper v0.1.1/go.mod h1:1eG6PYpuIrBDjoZpqLxUyXs/U7KMOtz6d/Hpgl+lFRo=
+github.com/solsw/generichelper v0.8.0 h1:m23fAnKqPtZ2BOyRdizrFo0uxdH5kyVH5AJREc3Xi64=
+github.com/solsw/generichelper v0.8.0/go.mod h1:8l4YjYBOZakA0G+wWJMK1dnbq87xp34EbP7UR9rfIBw=
